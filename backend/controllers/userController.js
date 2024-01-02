@@ -122,7 +122,6 @@ const block_tour_agent = async (req, res) => {
       
       res.status(200).json({ message: 'User blocked successfully' });    
       // Call the delete_tour_agent route handler to delete the user from the User collection
-      //await delete_tour_agent(req, res);
       if(user && user.type==='tour_agent'){
         // Find user in database by Email and delete it
         await User.findOneAndDelete({email});
