@@ -74,7 +74,6 @@ const Navbar = () => {
                           View
                         </Link>
                       </MDBDropdownItem>
-                      
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>
