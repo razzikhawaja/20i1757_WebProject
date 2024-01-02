@@ -61,6 +61,8 @@ const TourAgentList = () => {
                 <th scope='col'>Address</th>
                 <th scope='col'>Role</th>
                 <th scope='col'>Actions</th>
+                <th scope='col'>Actions</th>
+
               </tr>
             </MDBTableHead>
             <MDBTableBody>
@@ -89,6 +91,7 @@ const TourAgentList = () => {
                     <p className='fw-normal mb-1'>{agent.type}</p>
                   </td>
                   <td>
+                    
                     <MDBBtn
                       color='link'
                       rounded
@@ -103,6 +106,36 @@ const TourAgentList = () => {
                       Edit
                     </MDBBtn>
                   </td>
+                  <td>
+                    <MDBBtn
+                      color='danger'
+                      rounded
+                      size='sm'
+                      style={{
+                        color: '#fff',
+                        textDecoration: 'none',
+                        padding: '0',
+                      }}
+                      onClick={() => handleBlock(agent.email)} // Pass agent email to the handleBlock function
+                    >
+                      Block
+                    </MDBBtn>
+                  </td>
+                  <td>
+                  <MDBBtn
+                      color='danger'
+                      rounded
+                      size='sm'
+                      style={{
+                        color: '#fff',
+                        textDecoration: 'none',
+                        padding: '0',
+                      }}
+                      onClick={() => handleDelete(agent.email)} // Pass agent email to the handleDelete function
+                    >
+                      Delete
+                    </MDBBtn>
+                    </td>
                 </tr>
               ))}
             </MDBTableBody>
