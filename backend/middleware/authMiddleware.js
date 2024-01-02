@@ -4,7 +4,7 @@ require('dotenv').config();
 const requireAuth = (req, res, next)=>{
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
-    if(token==null){ //403 you have token but this token is invalid or no longer can be used
+    if(token==null){ 
         res.sendStatus(401);
         console.log('invalid token');  
     }
