@@ -30,6 +30,24 @@ const TourAgentList = () => {
     // Redirect to the UpdateTourAgent page with agentEmail as a URL parameter
     navigate(`/update_tour_agent/${agentEmail}`);
   };
+  
+  const handleDelete = (agentEmail) => {
+    axios
+      .delete(`http://localhost:3000/delete_tour_agent/${agentEmail}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+        // Remove the deleted agent from the data array
+        const updatedData = data.filter((agent) => agent.email !== agentEmail);
+        setData(updatedData);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  };
 
   return (
     <>
