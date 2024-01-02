@@ -49,6 +49,30 @@ const TourAgentList = () => {
       });
   };
 
+  const handleBlock = (agentEmail) => {
+    axios
+      .post(
+        'http://localhost:3000/users/block_tour_agent',
+        {
+          email: agentEmail,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      .then(function (response) {
+        console.log(response);
+        // Remove the blocked agent from the data array
+        const updatedData = data.filter((agent) => agent.email !== agentEmail);
+        setData(updatedData);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <Navbar />
