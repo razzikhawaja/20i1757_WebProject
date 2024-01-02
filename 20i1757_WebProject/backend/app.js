@@ -10,7 +10,6 @@ const app = express() // setup express app
 app.use(express.json())
 app.use(cookieParser()) 
 app.use(cors())
-// app.use(express.static('views'));
 app.use(express.urlencoded( { extended: true } )) 
 
 const dbURI = 'mongodb+srv://razzi:0984@cluster0.vuen418.mongodb.net/Project'
