@@ -74,16 +74,7 @@ const Navbar = () => {
                           View
                         </Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem>
-                        <Link className="dropdown-item" to="/block_customer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          Block
-                        </Link>
-                      </MDBDropdownItem>
-                      <MDBDropdownItem>
-                        <Link className="dropdown-item" to="/delete_customer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          Delete
-                        </Link>
-                      </MDBDropdownItem>
+                      
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>

@@ -103,7 +103,6 @@ const TourAgentList = () => {
                 <th scope='col'>Address</th>
                 <th scope='col'>Role</th>
                 <th scope='col'>Actions</th>
-                <th scope='col'>Actions</th>
 
               </tr>
             </MDBTableHead>
