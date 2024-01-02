@@ -74,6 +74,16 @@ const Navbar = () => {
                           View
                         </Link>
                       </MDBDropdownItem>
+                      <MDBDropdownItem>
+                        <Link className="dropdown-item" to="/block_customer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          Block
+                        </Link>
+                      </MDBDropdownItem>
+                      <MDBDropdownItem>
+                        <Link className="dropdown-item" to="/delete_customer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          Delete
+                        </Link>
+                      </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>
@@ -94,21 +104,13 @@ const Navbar = () => {
                           View
                         </Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem>
-                        <Link className="dropdown-item" to="/delete_tour_agent" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          Delete
-                        </Link>
-                      </MDBDropdownItem>
+                      
                       <MDBDropdownItem>
                         <Link className="dropdown-item" to="/create_tour_agent" style={{ textDecoration: 'none', color: 'inherit' }}>
                           Register
                         </Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem>
-                        <Link className="dropdown-item" to="/users/block_tour_agent" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          Block
-                        </Link>
-                      </MDBDropdownItem>
+                      
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavbarItem>
